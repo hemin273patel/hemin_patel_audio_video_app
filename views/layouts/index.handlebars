@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{{ title }}</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.15/dist/vue.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+</head>
+<body>
+	<header>
+		<img src="/images/roku.svg" alt="Roku logo" width="90"><span>FlashBack</span>
+		<nav>
+			<ul>
+				<li>Kids</li>
+				<li><i class="fas fa-user-circle"></i></li>
+				<li><i class="fas fa-cog"></i></li>
+			</ul>
+		</nav>
+	</header>
+
+
+	<main>
+	  {{{ body }}}
+	</main>
+
+
+
+
+
+
+	<footer>
+		<div class="btmText">
+			<h2>
+				ENJOY YOUR FAVOURITE MOVIES.
+			</h2>
+		</div>
+		<div class="inliner lefter">
+			<p class="copy">
+				&copy; 2018 The Awesome Company, Inc
+			</p>
+		</div>
+
+
+
+
+		<div class="inliner righter">
+			<p class="copy2">
+				Share Us On :
+			</p>
+			<ul>
+				<li class="widther">
+					<iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button&size=small&mobile_iframe=true&width=59&height=20&appId" width="59" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+				</li>
+				<li class="widther">
+					<a target="_blank" data-size="default" class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Tweet%20This">Tweet</a>
+				</li>
+	      <li class="widther">
+	        <div class="g-plus" data-action="share" data-height="24"></div>
+				</li>
+				<li class="widther">
+					<div class="g-ytsubscribe" data-channel="GoogleDevelopers" data-layout="default" data-count="default"></div>
+				</li>
+			</ul>
+		</div>
+	</footer>
+
+
+
+  <script>
+    var appData = {
+      movies : {{{ data }}}
+    }
+  </script>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<script src="/dist/vue-social-sharing.min.js"></script>
+	{{#if mainpage}}
+  	<script src="/js/main.js"></script>
+	{{/if}}
+
+	{{#if videopage}}
+		<script src="/js/videoVM.js"></script>
+	{{/if}}
+</body>
+</html>
