@@ -4,9 +4,9 @@ var router = express.Router();
 
 /* GET home page. */
 // router.get('/', videoController.get_all_movies);
-router.get('/', videoController.move_to_login);
+router.get('/', videoController.show_login);
 
-router.get('/redirectToLogIn', videoController.move_to_login);
+router.get('/home', videoController.get_all_movies);
 
 router.get('/movies/:id/:movie', videoController.get_one_movie );
 

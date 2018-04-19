@@ -80,6 +80,6 @@ exports.post_new_review = (req, res) => {
   })
 };
 
-exports.move_to_login = (req, res) =>{
-  res.render('home');
+exports.show_login = (req, res) =>{
+  res.render('login');
 };
